@@ -1,0 +1,15 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://saminamina:kkk123kkk@train.ciaxsoa.mongodb.net/?retryWrites=true&w=majority&appName=Train
+            database: Train
+    application:
+        name: time-table
+eureka:
+    instance:
+        prefer-ip-address: true
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka

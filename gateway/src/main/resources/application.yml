@@ -1,0 +1,23 @@
+server:
+    port: 8085
+spring:
+    cloud:
+        gateway:
+            routes:
+                - id: location
+                  uri: http://localhost:8084/
+                  predicates:
+                    - Path=/api/location/**
+                - id: time-table
+                  uri: http://localhost:8083/
+                  predicates:
+                    - Path=/api/timetable/**
+                - id: train_details
+                  uri: http://localhost:8081/
+                  predicates:
+                    - Path=/api/train/**
+                - id: train_reservation
+                  uri: http://localhost:8082/
+                  predicates:
+                    - Path=/api/reservation/**
+
